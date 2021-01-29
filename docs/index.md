@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: https://v1.vuepress.vuejs.org/hero.png
+heroImage: /images/diamondIcon.png
 tagline: Documentation
 actionText: Quick Start →
 actionLink: /guide/introduction

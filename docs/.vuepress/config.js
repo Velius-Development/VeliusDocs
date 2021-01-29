@@ -17,9 +17,11 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/config/#head
    */
   head: [
-    ['meta', { name: 'theme-color', content: '#3eaf7c' }],
+    //['meta', { name: 'theme-color', content: '#3eaf7c' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
-    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }]
+    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
+    ['script', { src: 'https://unpkg.com/axios/dist/axios.min.js'}],
+    ['script', {src: 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'}]
   ],
 
   /**
@@ -44,7 +46,7 @@ module.exports = {
       },
       {
         text: 'Download',
-        link: 'https://velius.zapto.org'
+        link: '/custom_pages/download'
       },
       {
         text: 'Languages',

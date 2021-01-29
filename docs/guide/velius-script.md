@@ -15,4 +15,3 @@ If you are using or demoing components that are not SSR friendly (for example co
 ::: tip
 It really isn't that hard.
 :::
-$page.lastUpdated
