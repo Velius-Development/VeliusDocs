@@ -135,7 +135,7 @@ a {
 #slide {
     width: 100%;
     height: 100%;
-    left: -350px;
+    left: -250px;
     background: #BFC0C0;
     position: absolute;
     transition: all .35s ease-Out;
