@@ -1,0 +1,206 @@
+// NAVBAR
+
+body .navbar .site-name, h1, h2
+  color: $titleColor
+
+// SEARCH BOX
+
+.navbar
+  box-shadow: 0 3px 8px 0 rgba(116, 129, 141, 0.1)
+  .links
+    flex-direction: row-reverse
+
+    .search-box
+      font-size: 1rem
+      border-radius: 3px
+      margin: 0 0 0 1rem
+
+      input
+        font: inherit
+        font-size: 1rem
+        padding-bottom: 3px
+        border: none
+        margin: 0
+        text-align: left
+        border-radius: 3px
+        padding-left: 2rem
+        background-color: $bgColor !important
+        color: lightgray !important
+
+      .suggestions
+        border-radius: 0
+        border-color: $lightDelimiterColor
+        top: 2.25rem
+        width: fit-content;
+        left: -10
+        background-color: $sidebarBgColor
+
+      .suggestion
+        background-color: transparent
+
+
+      @media (min-width: $MQNarrow)
+        &:before
+          top: 50%
+          left: 0
+          height: $navbarHeight
+          content: ""
+          position: absolute
+          transform: translateY(-50%)
+          border-left: 1px solid $lightDelimiterColor
+
+        input
+          height: 100%
+          background-size: 0.9rem
+          background-position-y: 50%
+
+    #search-form
+      line-height: inherit
+
+// SIDEBAR
+
+.sidebar
+  background-color: $sidebarBgColor
+  padding-left: 1.5rem
+
+.sidebar-group
+  color: $sidebarHeaderColor
+  margin-bottom: 1.5rem
+
+  .sidebar-heading, .sidebar-heading
+    font-size: 0.75rem
+    text-transform: uppercase
+    color: $sidebarHeaderColor
+    letter-spacing: 1.2px
+    padding: 0.5rem 1.5rem 0.5rem 1rem
+
+  li a.sidebar-link
+    padding-left: 1.2rem
+
+.sidebar-links
+  a.sidebar-link
+    font-size: 0.9rem
+    font-weight: 500
+    line-height: 1.5
+    padding: 0.5rem 1.5rem 0.5rem 1rem
+    border: 1px solid transparent
+    color: $textColor
+
+    &:hover
+      color: $textColor
+      background-color: $darkDark !important
+
+    &.active
+      border-color: $lightDelimiterColor
+      border-right: none
+      color: $accentColor !important
+
+  
+
+  .sidebar-links .sidebar-sub-headers a
+    background-color: transparent !important
+    border-color: transparent
+
+    &:hover
+      color: lightgray
+
+// H1
+
+h1
+  padding-bottom: 1rem
+  border-bottom: 2px solid $lightDelimiterColor
+  font-size: 2rem
+  font-weight: 500
+  line-height: 1.5
+
+// Position the delimiting line above the h2
+// but it can cause an issue if the first h2 is directly afterwards the h1
+
+// h2
+//   position: relative
+//   border-bottom: none
+
+//   &:before
+//     bottom: 3.5rem
+//     left: 0
+//     width: 100%
+//     height: 1px
+//     content: ""
+//     position: absolute
+//     background-color: $lightDelimiterColor
+//   
+// 
+
+// PAGE NAV
+
+.page-nav .inner
+  display: grid
+  grid-column-gap: 1.5rem
+  grid-template-areas: "previous next"
+  grid-template-columns: 1fr 1fr
+
+  span.prev, span.next
+    display: flex
+    align-items: center
+    border: 1px solid $lightDelimiterColor
+    grid-area: previous
+    box-shadow: 0 3px 8px 0 rgba(116, 129, 141, 0.1)
+    border-radius: 3px
+    background-color: $darkDark
+    padding-left: 1rem
+
+    a
+      flex: 1
+      color: $textColor
+      text-align: right
+      padding: 1rem 1rem 1rem 0
+
+      &:hover
+        color: $accentColor !important
+
+  span.next
+    grid-area: next
+    padding-right: 1rem
+    a
+      text-align: left
+
+
+//DARKEN
+
+html, body
+    background-color: #2D3142
+    scroll-behavior: smooth
+
+.navbar
+    background-color: #1d2131
+.links
+    background-color: #1d2131 !important
+
+.navbar .links .search-box input
+    padding-left: 28px !important
+
+.navbar .links .search-box:before
+    display: none
+
+a.sidebar-link.active
+    background-color: #1d2131 !important
+
+.sidebar-link:hover
+    background-color: #1d2131 !important
+
+.cursor
+  transition: 150ms !important//cubic-bezier(.03,1.71,.33,.97) !important
+
+p
+  font-weight: 500
+  font-size: 1.2rem
+
+code
+  background-color: #1b1f23 !important
+
+.custom-block
+  background-color: $darkDark !important
+
+.nav-dropdown
+  background-color: $darkDark !important
+  border-color: $borderColor !important
