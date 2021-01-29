@@ -6,10 +6,10 @@
         <div id="container">
             <div class="button" id="button-1">
                 <div id="slide"></div>
-                <a id="downloadBtn" href="setup.exe">Download</a>
+                <a id="downloadBtn" href="https://mysterymaker.zap106456-1.plesk05.zap-webspace.com/setup.exe">Download</a>
             </div>
         </div>
-	<iframe id="iFrame1" src="https://velius.zapto.org/mysterymaker/changelog" width="100%" height="100%" style="border: none;"></iframe>
+        <iframe id="iFrame1" src="/custom_pages/changelog.html" width="100%" height="100%" style="border: none;"></iframe>
     </template>
   </Layout>
 </template>
@@ -21,7 +21,7 @@ export default {
     components: { Layout },
     data() {
         return {
-            version: ""
+            version: "LOADING..."
         };
     },
     mounted: function(){
@@ -33,17 +33,11 @@ export default {
                 this.version = response.data
             });
 
-            function resizeIFrameToFitContent( iFrame ) {
+            var iFrame = document.getElementById( 'iFrame1' );
+            iFrame.height = iFrame.contentWindow.document.body.scrollHeight * 1.2;
 
-                iFrame.height = iFrame.contentWindow.document.body.scrollHeight * 1.4;
-            }
+            
 
-            window.addEventListener('DOMContentLoaded', function(e) {
-
-                var iFrame = document.getElementById( 'iFrame1' );
-                resizeIFrameToFitContent( iFrame );
-
-            } );
     },
     destroyed: function () {
         document.getElementById("styles").remove();
@@ -52,11 +46,115 @@ export default {
 </script>
 
 <style scoped>
-@import url("https://mysterymaker.zap106456-1.plesk05.zap-webspace.com/css/styles.css");
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400');
+body {
+  background: #2D3142;
+  font-family: 'Raleway', sans-serif;
+  font-size: xx-large;
+}
+
+
+/* Heading */
 
 h1 {
-    border-bottom: none;
+  font-size: 5em;
+  text-align: center;
+  padding: 70px 0 0 0;
+  color: #EF8354;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  border: none;
 }
+
+h6 {
+    font-family: Consolas;
+    font-size: 2em;
+    text-align: center;
+    color: #ffffffb4;
+    font-weight: 300;
+    letter-spacing: 3px;
+    margin: 0;
+}
+
+.outlinedText {
+  border: 2px solid #4F5D75;
+  padding: 10px;
+  padding-top: 0;
+}
+
+
+/* Layout Styling */
+
+#container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 80px 0 60px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+/* Button Styles */
+
+.button {
+  display: inline-flex;
+  height: 60px;
+  width: 250px;
+  border: 2px solid #BFC0C0;
+  margin: 20px 20px 20px 20px;
+  color: #BFC0C0;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: .8em;
+  letter-spacing: 1.5px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+a {
+  color: #BFC0C0;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+/* First Button */
+
+#button-1 {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+#button-1 a {
+    position: relative;
+    transition: all .35s ease-Out;
+}
+
+#slide {
+    width: 100%;
+    height: 100%;
+    left: -350px;
+    background: #BFC0C0;
+    position: absolute;
+    transition: all .35s ease-Out;
+    bottom: 0;
+}
+
+#button-1:hover #slide {
+    left: 0;
+}
+
+#button-1:hover a {
+    color: #2D3142;
+}
+
+#downloadBtn {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2rem;
+}
+
 ::-webkit-scrollbar {
     display: none;
 }

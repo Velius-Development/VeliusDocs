@@ -1,4 +1,4 @@
-# Velius Script
+# Velius Script <Badge text="NEW"/>
 
 ## Browser API Access Restrictions
 
