@@ -47,14 +47,6 @@ module.exports = {
       {
         text: 'Download',
         link: '/custom_pages/download'
-      },
-      {
-        text: 'Languages',
-        ariaLabel: 'Language Menu',
-        items: [
-          { text: 'English', link: '/language/english/' },
-          { text: 'Deutsch', link: '/language/german/' }
-        ]
       }
     ],
     sidebar: {
