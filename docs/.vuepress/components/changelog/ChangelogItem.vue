@@ -97,6 +97,7 @@ export default {
     	line-height: 25px; 
     	font-family: Helvetica Neue, Arial, sans-serif;
     	padding-left: 10px;
+		padding-top: 4px;
     }
 
     .changelog-code {
