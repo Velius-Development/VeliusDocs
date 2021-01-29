@@ -1,16 +1,31 @@
-on: push
-name: Publish Website
+on:
+  push:
+    branches: [ master ]
 jobs:
-  FTP-Deploy-Action:
-    name: FTP-Deploy-Action
+  build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./
     steps:
-    - uses: actions/checkout@v2.1.0
+    - uses: actions/checkout@v2
       with:
         fetch-depth: 2
-    - name: FTP-Deploy-Action
+
+    - name: Install Composer Dependencies
+      run: composer install --prefer-dist --no-progress --no-suggest
+
+    - name: npm install
+      run: npm install
+
+    - name: npm run bundle
+      run: npm run bundle
+
+    - name: FTP Deploy to WP Engine (Staging)
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
       with:
-        ftp-server: velius.zapto.org
+        ftp-server: sftp://velius.zapto.org:22/
         ftp-username: vDocs
         ftp-password: ${{ secrets.SSH_PRIVATE_KEY }}
+        local-dir: ./docs/.vuepress/dist
