@@ -7,10 +7,10 @@
     "name": "Fabian Keßler",
     "email": "malikfk100@gmail.com"
   },
-  "repository": "VeliusDocs/VeliusDocs",
+  "repository": "https://github.com/SpyrexDE/VeliusDocs",
   "scripts": {
-    "dev": "vuepress dev src",
-    "build": "vuepress build src"
+    "dev": "vuepress dev",
+    "build": "vuepress build"
   },
   "license": "MIT",
   "devDependencies": {

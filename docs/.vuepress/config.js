@@ -1,4 +1,4 @@
-const { description } = require('../../package')
+const { description } = require('../package')
 
 
 module.exports = {
@@ -28,7 +28,7 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
   themeConfig: {
-    repo: 'vuejs/vuepress',
+    repo: 'https://github.com/SpyrexDE/VeliusDocs',
     editLinks: true,
     docsDir: 'docs',
     editLinkText: '✏️ Edit',
