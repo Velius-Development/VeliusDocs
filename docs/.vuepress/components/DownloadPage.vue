@@ -34,10 +34,14 @@ export default {
             });
     },
     created() {
-      window.addEventListener("resize", this.onResize);
+      if (process.browser){
+        window.addEventListener("resize", this.onResize);
+      }
     },
     destroyed() {
-      window.removeEventListener("resize", this.onResize);
+      if (process.browser){
+        window.removeEventListener("resize", this.onResize);
+      }
       document.getElementById("styles").remove();
     },
     methods: {
