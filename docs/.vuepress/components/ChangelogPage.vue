@@ -34,7 +34,7 @@ export default {
     	background-color: #37445a;
     	border-radius: 6px;
     	padding: 18px 20px;
-    	margin: 10px;
+    	margin: 20px;
     	margin-bottom: 30px;
     	margin-left:auto;
     	margin-right:auto;

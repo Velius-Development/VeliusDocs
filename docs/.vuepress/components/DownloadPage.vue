@@ -9,7 +9,7 @@
                 <a id="downloadBtn" href="https://mysterymaker.zap106456-1.plesk05.zap-webspace.com/setup.exe">Download</a>
             </div>
         </div>
-        <iframe id="iFrame1" src="/custom_pages/changelog.html" width="100%" height="100%" style="border: none;"></iframe>
+        <iframe id="iFrame1" @load="onResize()" src="/custom_pages/changelog.html" width="100%" height="100%" style="border: none;"></iframe>
     </template>
   </Layout>
 </template>
@@ -32,16 +32,20 @@ export default {
             axios.get("https://mysterymaker.zap106456-1.plesk05.zap-webspace.com/php/getVersion.php").then(response => {
                 this.version = response.data
             });
-
-            var iFrame = document.getElementById( 'iFrame1' );
-            iFrame.height = iFrame.contentWindow.document.body.scrollHeight * 1.2;
-
-            
-
     },
-    destroyed: function () {
-        document.getElementById("styles").remove();
+    created() {
+      window.addEventListener("resize", this.onResize);
     },
+    destroyed() {
+      window.removeEventListener("resize", this.onResize);
+      document.getElementById("styles").remove();
+    },
+    methods: {
+      onResize(e) {
+        var iFrame = document.getElementById( 'iFrame1' );
+        iFrame.height = iFrame.contentWindow.document.body.scrollHeight * 1.2;
+      }
+    }
 }
 </script>
 
