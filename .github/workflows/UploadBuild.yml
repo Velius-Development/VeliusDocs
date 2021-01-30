@@ -19,3 +19,4 @@ jobs:
         ftp-username: vDocs
         ftp-password: ${{ secrets.SSH_PRIVATE_KEY }}
         local-dir: ./docs/.vuepress/dist
+        git-ftp-args: --insecure
