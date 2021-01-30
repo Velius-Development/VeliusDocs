@@ -80,6 +80,7 @@ h1 {
   letter-spacing: 1px;
   margin-bottom: 15px;
   border: none;
+  text-decoration: none;
 }
 
 h6 {
