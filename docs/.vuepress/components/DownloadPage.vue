@@ -9,7 +9,7 @@
                 <a id="downloadBtn" href="https://mysterymaker.zap106456-1.plesk05.zap-webspace.com/setup.exe">Download</a>
             </div>
         </div>
-        <iframe id="iFrame1" @load="onResize()" src="/custom_pages/changelog.html" width="100%" height="100%" style="border: none;"></iframe>
+        <iframe id="iFrame1" @load="onLoad()" src="/custom_pages/changelog.html" width="100%" height="100%" style="border: none;"></iframe>
     </template>
   </Layout>
 </template>
@@ -32,22 +32,23 @@ export default {
             axios.get("https://mysterymaker.zap106456-1.plesk05.zap-webspace.com/php/getVersion.php").then(response => {
                 this.version = response.data
             });
+
     },
     created() {
-      if (process.browser){
         window.addEventListener("resize", this.onResize);
-      }
     },
     destroyed() {
-      if (process.browser){
-        window.removeEventListener("resize", this.onResize);
-      }
       document.getElementById("styles").remove();
+      window.removeEventListener("resize", this.onResize);
     },
     methods: {
       onResize(e) {
         var iFrame = document.getElementById( 'iFrame1' );
         iFrame.height = iFrame.contentWindow.document.body.scrollHeight * 1.2;
+      },
+      onLoad() {
+        this.onResize();
+        document.getElementById( 'iFrame1' ).style.opacity = 1;
       }
     }
 }
@@ -55,6 +56,14 @@ export default {
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400');
+
+#iFrame1{
+    opacity: 0;
+    transition: opacity 0.5s;
+    -webkit-transition: opacity 0.5s; /* Safari */
+    transition-timing-function: ease-out;
+}
+
 body {
   background: #2D3142;
   font-family: 'Raleway', sans-serif;
