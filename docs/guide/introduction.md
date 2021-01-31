@@ -6,7 +6,7 @@ Velius is the content creation system for the Mystery-Heini-Games. This system i
 
 ## MysteryMaker
 
-The MysteryMaker is a Windows application developed by the Velius Eninge team. It is a tool for creating dialogues and their logic.  All dialogue writing can be done using a self explaining GUI. The logic has to be written in out custom scripting language called *"Velius Script"*.
+The MysteryMaker is a Windows application developed by the Velius Eninge team. It is a tool for creating dialogues and their logic.  All dialogue writing can be done using a self explaining GUI. The logic has to be written in our custom scripting language called *"Velius Script"*.
 
 ## Velius Script
 
