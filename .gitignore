@@ -66,3 +66,6 @@ docs/.vuepress/dist/
 
 # Serverless directories
 .serverless
+
+# vscode settings
+.vscode
