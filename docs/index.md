@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /images/diamondIcon.png
+heroImage: /images/diamondIcon.svg
 tagline: Documentation
 actionText: Quick Start →
 actionLink: /guide/introduction
