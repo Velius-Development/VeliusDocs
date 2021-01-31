@@ -30,7 +30,7 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
   themeConfig: {
-    repo: 'https://github.com/SpyrexDE/VeliusDocs',
+    //repo: 'https://github.com/SpyrexDE/VeliusDocs',
     editLinks: true,
     docsDir: 'docs',
     editLinkText: '✏️ Edit',
@@ -47,6 +47,13 @@ module.exports = {
       {
         text: 'Download',
         link: '/custom_pages/download'
+      },
+      {
+        text: 'More',
+        items: [
+          { text: 'GitHub', link: "https://github.com/SpyrexDE/VeliusDocs"},
+          { text: 'Impressum', link: '#' }
+        ]
       }
     ],
     sidebar: {
