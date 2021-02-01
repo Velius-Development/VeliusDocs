@@ -1,12 +1,16 @@
 <template>
   <Layout>
     <template slot="page-top">
-        <h1><span class="outlinedText">Mystery</span> Maker</h1>
-        <h6>Version {{ version }}</h6>
+          <h1><span class="outlinedText">Mystery</span> Maker</h1>
+      <Transition mode="out-in" name="fade-in">
+        <h6 :key="version">Version {{ version }}</h6>
+      </Transition>
         <div id="container">
             <div class="button" id="button-1">
                 <div id="slide"></div>
-                <a id="downloadBtn" href="https://mysterymaker.zap106456-1.plesk05.zap-webspace.com/setup.exe">Download</a>
+                <Transition mode="out-in" name="fade-in">
+                  <a id="downloadBtn" :key="downloadText">{{ downloadText }}</a>
+                </Transition>
             </div>
         </div>
         <iframe id="iFrame1" @load="onLoad()" src="/custom_pages/changelog.html" width="100%" height="100%" style="border: none;"></iframe>
@@ -21,7 +25,8 @@ export default {
     components: { Layout },
     data() {
         return {
-            version: "LOADING..."
+            version: "LOADING...",
+            downloadText: "LOADING",
         };
     },
     mounted: function(){
@@ -31,6 +36,9 @@ export default {
             document.head.append(style);
             axios.get("https://mysterymaker.zap106456-1.plesk05.zap-webspace.com/php/getVersion.php").then(response => {
                 this.version = response.data
+
+                $('#downloadBtn').href="https://mysterymaker.zap106456-1.plesk05.zap-webspace.com/setup.exe";
+                this.downloadText = "Download";
             });
 
         window.addEventListener("resize", this.onResize);
@@ -173,5 +181,26 @@ a {
 
 ::-webkit-scrollbar {
     display: none;
+}
+
+
+
+.text {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.fade-in-enter-active {
+  transition: opacity 300ms cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+
+.fade-in-leave-active {
+  transition: opacity 225ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.fade-in-enter,
+.fade-in-leave-to {
+  opacity: 0;
 }
 </style>
