@@ -52,7 +52,7 @@ module.exports = {
         text: 'More',
         items: [
           { text: 'GitHub', link: "https://github.com/SpyrexDE/VeliusDocs"},
-          { text: 'Impressum', link: '#' }
+          { text: 'Impressum', link: '/custom_pages/impressum' }
         ]
       }
     ],
