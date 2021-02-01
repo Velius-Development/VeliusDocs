@@ -105,7 +105,7 @@ h6 {
 #container {
   width: 100%;
   margin: 0 auto;
-  padding: 80px 0 60px 0;
+  padding: 80px 0 50px 0;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

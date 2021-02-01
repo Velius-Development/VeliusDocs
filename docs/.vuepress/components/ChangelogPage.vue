@@ -40,7 +40,7 @@ export default {
     	margin-right:auto;
     	max-width: 700px;
     	min-width: 200px;
-	position: relative;
+	    position: relative;
     }
 
     .featured-title {
@@ -51,6 +51,7 @@ export default {
     	text-transform: uppercase;
     	text-align: center;
     	padding-bottom: 10px;
+      margin-top: 2rem;
     }
 
     ::-webkit-scrollbar {
