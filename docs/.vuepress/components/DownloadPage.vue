@@ -36,9 +36,6 @@ export default {
             document.head.append(style);
             axios.get("https://mysterymaker.zap106456-1.plesk05.zap-webspace.com/api/getVersion.php").then(response => {
                 this.version = response.data
-            });
-
-            axios.get("https://mysterymaker.zap106456-1.plesk05.zap-webspace.com/setup.exe").then(response => {
                 $('#downloadBtn').href="https://mysterymaker.zap106456-1.plesk05.zap-webspace.com/setup.exe";
                 this.downloadText = "Download";
             });
