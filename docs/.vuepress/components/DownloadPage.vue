@@ -9,7 +9,7 @@
             <div class="button" id="button-1">
                 <div id="slide"></div>
                 <Transition mode="out-in" name="fade-in">
-                  <a id="downloadBtn" :key="downloadText">{{ downloadText }}</a>
+                  <a id="downloadBtn" href="https://mysterymaker.zap106456-1.plesk05.zap-webspace.com/setup.exe" :key="downloadText">{{ downloadText }}</a>
                 </Transition>
             </div>
         </div>
@@ -37,7 +37,6 @@ export default {
             axios.get("https://mysterymaker.zap106456-1.plesk05.zap-webspace.com/php/getVersion.php").then(response => {
                 this.version = response.data
 
-                $('#downloadBtn').href="https://mysterymaker.zap106456-1.plesk05.zap-webspace.com/setup.exe";
                 this.downloadText = "Download";
             });
 

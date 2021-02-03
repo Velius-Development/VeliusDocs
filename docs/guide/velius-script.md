@@ -11,7 +11,7 @@ Velius Script is the logic's core of your MysteryMaker project. Some usecases wo
 - Compare variable's values
 - Ask user for input
 
-Of course, Velius Script is able to do much more than that and gets updated frequently. So to stay up to date for new Velius Script features, check out our [changelog](/custom_pages/changelog) after every update.
+Of course, Velius Script is able to do much more than just that and gets updated frequently. So to stay up to date for new Velius Script features, check out our [changelog](/custom_pages/changelog) after every update.
 
 ::: tip
 The changelog is also accessible on the [download page](/custom_pages/download).
