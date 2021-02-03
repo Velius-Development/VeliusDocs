@@ -9,7 +9,7 @@ This repository is public to enable all users to fix and expand the documentatio
 
 ### How to add a page
 
-- **cd into [docs/guide](https://github.com/SpyrexDE/VeliusDocs/tree/master/docs/guide)** directory
+- **go into [docs/guide](https://github.com/SpyrexDE/VeliusDocs/tree/master/docs/guide)** directory
 
 - **add your page as a ` .md`-file**
 
