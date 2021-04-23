@@ -7,7 +7,7 @@ actionLink: /guide/introduction
 
 features:
  - title: The Game
-   details: A funny interactive fiction game for the end-user to enjoy.
+   details: An exciting interactive fiction game for the end-user to enjoy.
  - title: MysteryMaker
    details: The tool a content creator can use to make thier stories readable by the game's engine.
  - title: Velius Script
