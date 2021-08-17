@@ -1,5 +1,6 @@
 # Velius Engine Documentation
 This repository is public to enable all users to fix and expand the documentation.
+<br>The main branch gets automatically deployed on [velius.dev](https://velius.dev/)
 
 ## How To Contribute
 
