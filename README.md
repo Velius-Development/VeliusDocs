@@ -14,7 +14,7 @@ This repository is public to enable all users to fix and expand the documentatio
 
 - **add your page as a ` .md`-file**
 
-- **add the name of the file you added without .md-Extension to [/docs/.vuepress/config.js](https://github.com/SpyrexDE/VeliusDocs/tree/master/docs/guide)**
+- **add the name of the file you added without .md-Extension to [/docs/.vuepress/config.js](https://github.com/SpyrexDE/VeliusDocs/tree/master/docs/.vuepress/config.js)**
 
   ```
   themeConfig: {
