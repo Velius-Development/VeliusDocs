@@ -63,7 +63,7 @@ module.exports = {
           collapsable: false,
           children: [
             'introduction',
-            'velius-script'
+            'how-it-works'
           ]
         }
       ],
