@@ -10,4 +10,4 @@ The MysteryMaker is a Windows application developed by the Velius Eninge team an
 
 ## GD-Script
 
-Although, having an own scripting language sounds cool, we decided to implement the GD-Script language due to it's big community, wide variaty of features and easy to learn syntax. GD-Script was originally developed for the Godot Game [Engine](https://godotengine.org). So it's focus was set on readability, performance and beginner friendlyness.
+Although, having an own scripting language sounds cool, we decided to implement the GD-Script language due to it's big community, wide variaty of features and easy to learn syntax. GD-Script was originally developed for the [Godot Game Engine](https://godotengine.org). So it's focus was set on readability, performance and beginner friendlyness.
