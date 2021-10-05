@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="https://api.netlify.com/api/v1/badges/42a0fbc4-0ffe-4a46-9b42-0571b700ae93/deploy-status"/>
+</div>
+
 # Velius Engine Documentation
 This repository is public to enable all users to fix and expand the documentation.
 <br>The main branch gets automatically deployed on [velius.dev](https://velius.dev/)
