@@ -41,8 +41,8 @@ module.exports = {
         link: '/guide/introduction',
       },
       {
-        text: 'Variables',
-        link: '/variables/'
+        text: 'Reference',
+        link: '/reference/'
       },
       {
         text: 'Download',
