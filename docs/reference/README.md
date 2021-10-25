@@ -239,10 +239,7 @@ Returns a given string value in its type
 
 ## Signals
 
-- signal new_dialogue(data): ##############################################################################
-                                 VELIUS ENGINE                              #
-##############################################################################
-#############################
+- signal new_dialogue(data): #############################
 SIGNALS:
 Called when a new dialogue is fired
 Returns a Dictionary
