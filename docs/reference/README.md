@@ -15,7 +15,7 @@ sidebar: auto
 ### next
 
 ```gdscript
-var next
+var next: Dictionary
 ```
 
 - **Setter**: `set_next`
@@ -25,19 +25,19 @@ Contains the current dialogue
 ### json\_data
 
 ```gdscript
-var json_data
+var json_data: Dictionary
 ```
 
 ### current\_json\_path
 
 ```gdscript
-var current_json_path
+var current_json_path: String
 ```
 
 ### current\_json\_location
 
 ```gdscript
-var current_json_location
+var current_json_location: String
 ```
 
 ### current\_chapter\_id
