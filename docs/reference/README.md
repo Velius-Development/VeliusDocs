@@ -197,7 +197,7 @@ Returns ImageTexture of a given local png path
 ### import
 
 ```gdscript
-func import(path = "all", dlc = false)
+func import(path = "all", dlc = false) -> void
 ```
 
 Imports the mystery package located at the given path
