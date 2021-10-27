@@ -9,16 +9,16 @@ This repository is public to enable all users to fix and expand the documentatio
 ## How To Contribute
 
 - **Clone** the master branch of this repository
-- **cd into docs** directory
 - **Use `npm install`** to install all dependencies
+- **Use `npm run dev`** to run local development server
 
 ### How to add a page
 
-- **go into [docs/guide](https://github.com/SpyrexDE/VeliusDocs/tree/master/docs/guide)** directory
+- **go into [guide](https://github.com/SpyrexDE/VeliusDocs/tree/master/guide)** directory
 
 - **add your page as a ` .md`-file**
 
-- **add the name of the file you added without .md-Extension to [/docs/.vuepress/config.js](https://github.com/SpyrexDE/VeliusDocs/tree/master/docs/.vuepress/config.js)**
+- **add the name of the file you added without .md-Extension to [/.vuepress/config.js](https://github.com/SpyrexDE/VeliusDocs/tree/master/.vuepress/config.js)**
 
   ```
   themeConfig: {
@@ -32,4 +32,4 @@ This repository is public to enable all users to fix and expand the documentatio
               'example-page', <- Add this line
   ```
 
-### **Thank you for contibuting!**
+### ***Thank you for contibuting!***

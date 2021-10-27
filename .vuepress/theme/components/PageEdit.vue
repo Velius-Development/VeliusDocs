@@ -11,14 +11,14 @@
       >{{ editLinkText }}</a>
       <OutboundLink />
     </div>
-
+    
     <div
       v-if="lastUpdated"
       class="last-updated"
     >
       <span class="prefix">{{ lastUpdatedText }}:</span>
       <span class="time">{{ lastUpdated }}</span>
-    <br>
+      <br>
       <div @mouseover="expanded = true" @mouseleave="expanded = false" v-bind:class="[expanded ? 'expanded' : 'collapsed']" style="float: right; margin-top: 10px">
         <span class="prefix" v-html="authorsText">{{ authorsText }}</span>
         <span class="time" v-html="authors">{{ authors }}</span>

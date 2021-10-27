@@ -32,7 +32,7 @@ module.exports = {
   themeConfig: {
     repo: 'https://github.com/SpyrexDE/VeliusDocs',
     editLinks: true,
-    docsDir: 'docs',
+    docsDir: '',
     editLinkText: '✏️ Edit',
     lastUpdated: true,
     nav: [
