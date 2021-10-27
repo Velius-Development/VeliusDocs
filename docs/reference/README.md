@@ -1,6 +1,7 @@
 ---
 editLink: false
 sidebar: auto
+title:Reference
 ---
 <!-- Auto-generated from JSON by GDScript docs maker. Do not edit this document directly. -->
 
@@ -17,9 +18,6 @@ The Velius class represents the whole backend of the game.
 It also works as the API between themes and MysterMaker project files.
 To acces it when developing a theme, please use the official Velius-Engine SDK.
 To access it when developing a mystery, you can use `Velius.<PROPERTY/METHOD>` in your scripts.
-##############################################################################
-                                 VELIUS ENGINE                              #
-##############################################################################
 
 ## Property Descriptions
 
