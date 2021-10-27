@@ -161,8 +161,8 @@ export default {
       let response = await axios.get('https://api.github.com/repos/Velius-Development/VeliusDocs/contributors')
 
       authors.forEach((entry, index) => {
-
         response.data.forEach((item, key) => {
+            alert(JSON.stringify(response))
             if (item.login == entry) {
               results.push("<a href='https://github.com/" + entry + "'>" + entry + "</a>")
               return
