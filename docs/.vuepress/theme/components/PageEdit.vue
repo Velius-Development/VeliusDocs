@@ -18,6 +18,11 @@
     >
       <span class="prefix">{{ lastUpdatedText }}:</span>
       <span class="time">{{ lastUpdated }}</span>
+    <br>
+      <div @mouseover="expanded = true" @mouseleave="expanded = false" v-bind:class="[expanded ? 'expanded' : 'collapsed']" style="float: right; margin-top: 10px">
+        <span class="prefix" v-html="authorsText">{{ authorsText }}</span>
+        <span class="time" v-html="authors">{{ authors }}</span>
+      </div>
     </div>
   </footer>
 </template>
@@ -28,6 +33,17 @@ import { endingSlashRE, outboundRE } from '../util'
 
 export default {
   name: 'PageEdit',
+
+  data: function() {
+    return {
+      authors: "",
+      expanded: false
+    }
+  },
+
+  mounted: async function () {
+    this.authors = await this.getAuthors()
+  },
 
   computed: {
     lastUpdated () {
@@ -42,6 +58,16 @@ export default {
         return this.$site.themeConfig.lastUpdated
       }
       return 'Last Updated'
+    },
+
+    authorsText () {
+      if (typeof this.$themeLocaleConfig.authors === 'string') {
+        return this.$themeLocaleConfig.authors
+      }
+      if (typeof this.$site.themeConfig.authors === 'string') {
+        return this.$site.themeConfig.authors
+      }
+      return 'Authors: '
     },
 
     editLink () {
@@ -114,6 +140,37 @@ export default {
         + (docsDir ? docsDir.replace(endingSlashRE, '') + '/' : '')
         + path
       )
+    },
+
+    async getAuthors () {
+      let authors = []
+      this.$page.authors.forEach((entry, index) => {
+        var name = ""
+        if(entry.email.includes("users.noreply.github.com")) {
+          name = entry.email
+          name = name.split(/\+|@/)[1]
+        } else {
+          name = entry.username
+        }
+        authors.push(name)
+      })
+
+      let results = []
+
+      //Check if valid contribution
+      let response = await axios.get('https://api.github.com/repos/Velius-Development/VeliusDocs/contributors')
+
+      authors.forEach((entry, index) => {
+
+        response.data.forEach((item, key) => {
+            if (item.login == entry) {
+              results.push("<a href='https://github.com/" + entry + "'>" + entry + "</a>")
+              return
+            }
+        })
+      })
+
+      return results.join(", ")
     }
   }
 }
@@ -134,6 +191,7 @@ export default {
       color lighten($textColor, 25%)
       margin-right 0.25rem
   .last-updated
+    max-width 40%
     float right
     font-size 0.9em
     .prefix
@@ -142,6 +200,16 @@ export default {
     .time
       font-weight 400
       color #767676
+      a
+        font-weight 350
+
+.expanded
+    overflow: visible;
+.collapsed
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
 
 @media (max-width: $MQMobile)
   .page-edit
