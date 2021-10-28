@@ -78,7 +78,7 @@ func set_next(new_next: Dictionary) -> void
 ### get\_dialogue\_by\_id
 
 ```gdscript
-func get_dialogue_by_id(id: int) -> Dictionary
+func get_dialogue_by_id(id: int, chapter_id) -> Dictionary
 ```
 
 Returns Dictionary containing
@@ -96,7 +96,7 @@ Returns a choice's action string
 ### start\_chapter
 
 ```gdscript
-func start_chapter(json_path: String, chapterID: int) -> var
+func start_chapter(json_path: String, chapterID: int, dialogue_id = 0) -> var
 ```
 
 Loads a Mystery's data and theme
