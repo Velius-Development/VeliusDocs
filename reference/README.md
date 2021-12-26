@@ -212,19 +212,19 @@ imported as DLC
 ### erase\_from
 
 ```gdscript
-func erase_from(dict: Dictionary, from: Dictionary) -> Dictionary
+func erase_from(dict: Dictionary, from: String) -> Dictionary
 ```
 
-Removes a dictionary's object from a dictionary
+Removes a dictionary's from property if equal to given value
 Only works on the first layer (non-recursive)
 
 ### get\_key\_by\_from
 
 ```gdscript
-func get_key_by_from(dict: Dictionary, from: Dictionary) -> String
+func get_key_by_from(dict: Dictionary, from: String) -> String
 ```
 
-Returns the key of a object with in a dictionary that eqals the 'from' dictioanry
+Returns the key of a object the given from value
 
 ### evaluate\_value
 
