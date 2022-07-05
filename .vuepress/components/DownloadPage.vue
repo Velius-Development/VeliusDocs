@@ -25,8 +25,8 @@ export default {
     components: { Layout },
     data() {
         return {
-            version: "LOADING...",
-            downloadText: "LOADING",
+            version: //"LOADING...",
+            downloadText: "DOWNLOAD",//"LOADING",
         };
     },
     mounted: function(){
