@@ -25,7 +25,7 @@ export default {
     components: { Layout },
     data() {
         return {
-            version: //"LOADING...",
+            version: "LOADING...",
             downloadText: "DOWNLOAD",//"LOADING",
         };
     },
