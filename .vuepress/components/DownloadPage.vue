@@ -9,7 +9,7 @@
             <div class="button" id="button-1">
                 <div id="slide"></div>
                 <Transition mode="out-in" name="fade-in">
-                  <a id="downloadBtn" href="https://mysterymaker.zap106456-1.plesk05.zap-webspace.com/setup.exe" :key="downloadText">{{ downloadText }}</a>
+                  <a id="downloadBtn" href="https://download.velius.dev/setup.exe" :key="downloadText">{{ downloadText }}</a>
                 </Transition>
             </div>
         </div>
@@ -34,11 +34,11 @@ export default {
             style.setAttribute("id", "styles");
             style.textContent = "html, body, #app, .theme-container, .page{height: 100%; width: 100%; padding: 0;} .theme-default-content, .page-edit {display: none;}";
             document.head.append(style);
-            axios.get("https://mysterymaker.zap106456-1.plesk05.zap-webspace.com/api/getVersion.php").then(response => {
-                this.version = response.data;
-                $('#downloadBtn').href="https://mysterymaker.zap106456-1.plesk05.zap-webspace.com/setup.exe";
-                this.downloadText = "Download";
-            });
+            //axios.get("https://mysterymaker.zap106456-1.plesk05.zap-webspace.com/api/getVersion.php").then(response => {
+                this.version = "v1.0.1.69" //= response.data;
+                $('#downloadBtn').href="https://download.velius.dev/setup.exe";
+            //    this.downloadText = "Download";
+            //});
 
         window.addEventListener("resize", this.onResize);
     },
